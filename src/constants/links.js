@@ -6,8 +6,8 @@ const Links = ({ styleClass, active, children }) => {
   const test = useContext(UserContext);
   console.log("test", test);
   const { user, setUser } = useContext(UserContext);
-
-  let loggedInMenus = false;
+ 
+  let loggedInMenus = false
 
   if (user && user.user.is_active) {
     loggedInMenus = true;
