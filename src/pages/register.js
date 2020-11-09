@@ -3,6 +3,8 @@ import { UserContext } from '../context/UserContext';
 import Layout from '../components/Layout'
 import { navigate } from '@reach/router'
 import { Link } from 'gatsby';
+import { API_URL } from '../utils/url';
+
 
 const Register = () => {
 
@@ -18,7 +20,7 @@ const Register = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8001/auth/local/register', {
+      const response = await fetch(`${API_URL}/auth/local/register`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
@@ -67,7 +69,7 @@ const Register = () => {
                 }
                 required
                 minLength="1"
-                maxLength="100"                
+                maxLength="100"
               />
               <input
                 className="input-field"
@@ -77,7 +79,7 @@ const Register = () => {
                   setError('');
                   setEmail(e.target.value);
                 }
-                }                
+                }
                 required
                 maxLength="100"
               />

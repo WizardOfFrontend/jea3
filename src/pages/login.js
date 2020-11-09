@@ -3,6 +3,7 @@ import { UserContext } from '../context/UserContext';
 import { Link } from 'gatsby'
 import { navigate } from '@reach/router'
 import Layout from '../components/Layout'
+import {API_URL} from '../utils/url';
 
 const Login = () => {
 
@@ -21,7 +22,7 @@ const Login = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8001/auth/local', {
+      const response = await fetch(`${API_URL}/auth/local`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
