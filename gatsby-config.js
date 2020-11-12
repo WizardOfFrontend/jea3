@@ -29,9 +29,9 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://toby-portfolio.herokuapp.com`,
+        apiURL: `http://188.166.186.251` || `http://localhost:8001`,
         queryLimit: 1000, // Default to 100
-        contentTypes: ['jobs', 'notices', 'projects', 'lectures', 'abouts'],
+        contentTypes: [ 'notices', 'lectures', 'abouts'],
         singleTypes: [],
       },
     },

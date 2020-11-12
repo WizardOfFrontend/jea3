@@ -3,13 +3,9 @@ import { UserContext } from '../context/UserContext';
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
-import Services from "../components/Services"
-import Jobs from "../components/Jobs"
-// import Projects from "../components/Projects"
 import Notices from "../components/Notices"
 import Lectures from '../components/Lectures';
 import About from '../components/About';
-import { Link } from 'gatsby';
 
 
 export default ({ data }) => {
@@ -30,7 +26,6 @@ export default ({ data }) => {
   const {
     allStrapiNotices: { nodes: notices },
     allStrapiLectures: { nodes: lectures },
-    // allStrapiBlogs: { nodes: blogs },
   } = data;
 
   window.onbeforeunload = () => {

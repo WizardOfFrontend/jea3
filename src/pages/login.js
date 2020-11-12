@@ -47,7 +47,7 @@ const Login = () => {
       console.log("localStorage Now:", JSON.parse(localStorage.getItem("user")));
       setUser(JSON.parse(localStorage.getItem("user")));
     } catch (error) {
-      console.log(error);
+      console.log("inside login", error);
     }
   }
 

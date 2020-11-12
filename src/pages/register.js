@@ -47,7 +47,7 @@ const Register = () => {
       navigate('/welcome')
 
     } catch (error) {
-      console.log(error);
+      console.log("inside the register",error);
     }
   }
   return (
